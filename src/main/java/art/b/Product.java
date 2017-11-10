@@ -1,6 +1,7 @@
 package art.b;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 import static java.util.Comparator.comparing;
 
@@ -17,7 +18,9 @@ public class Product {
     */
     public static final Comparator<Product> BY_WEIGHT
             = comparing(Product::getWeight);
-    //(p1, p2) -> Integer.compare(p1.getWeight(), p2.getWeight())
+    //(p1, p2) -> Integer.compare(p1.getWeight(), p2.getWeight())\
+    public static final Comparator<Product> BY_NAME
+            = comparing(Product::getName);
 
     private String name;
     private int weight;
@@ -48,5 +51,20 @@ public class Product {
         return " Name= " + this.name + ", " + " weight= " + this.weight;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        Product product = (Product) o;
+
+        if (weight != product.weight) return false;
+
+        return Objects.equals(this.name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, weight);
+    }
 }
