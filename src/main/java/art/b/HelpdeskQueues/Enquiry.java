@@ -1,4 +1,4 @@
-package art.b.Helpdesk;
+package art.b.HelpdeskQueues;
 
 public class Enquiry {
     private final Customer customer;

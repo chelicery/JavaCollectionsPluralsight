@@ -1,9 +1,7 @@
-package art.b.Helpdesk;
+package art.b.HelpdeskQueues;
 
-import java.util.ArrayDeque;
 import java.util.Comparator;
 import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.function.Predicate;
 
 public class Helpdesk {

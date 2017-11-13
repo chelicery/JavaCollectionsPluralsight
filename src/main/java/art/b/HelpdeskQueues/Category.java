@@ -1,4 +1,4 @@
-package art.b.Helpdesk;
+package art.b.HelpdeskQueues;
 
 public enum Category {
     PRINTER,

@@ -1,4 +1,4 @@
-package art.b.Helpdesk;
+package art.b.HelpdeskQueues;
 
 public class Customer {
     public static final Customer JACK = new Customer("Jack");
