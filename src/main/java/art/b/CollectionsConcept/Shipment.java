@@ -1,7 +1,8 @@
-package art.b;
+package art.b.CollectionsConcept;
+
+import art.b.CollectionsConcept.Product;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 

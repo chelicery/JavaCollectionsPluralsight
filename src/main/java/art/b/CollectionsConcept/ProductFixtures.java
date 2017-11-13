@@ -1,4 +1,8 @@
-package art.b;
+package art.b.CollectionsConcept;
+/*
+
+Class contains few test fixtures
+ */
 
 public class ProductFixtures {
     public static Product door = new Product("Wodden Door", 35);

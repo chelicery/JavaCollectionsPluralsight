@@ -1,4 +1,4 @@
-package art.b;
+package art.b.CollectionsConcept;
 
 import java.util.Comparator;
 import java.util.Objects;

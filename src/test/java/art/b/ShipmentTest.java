@@ -1,9 +1,9 @@
 package art.b;
-import static art.b.ProductFixtures.*;
+import static art.b.CollectionsConcept.ProductFixtures.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
 
-import art.b.ProductFixtures;
+import art.b.CollectionsConcept.Shipment;
 import org.junit.Test;
 
 public class ShipmentTest {

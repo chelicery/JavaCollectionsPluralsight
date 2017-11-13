@@ -1,8 +1,9 @@
 package art.b;
 
+import art.b.CollectionsConcept.ProductCatalogue;
 import org.junit.Test;
 
-import static art.b.ProductFixtures.*;
+import static art.b.CollectionsConcept.ProductFixtures.*;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertThat;
 

@@ -1,8 +1,7 @@
-package art.b;
+package art.b.CollectionsConcept;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 
 public class CollectionConcepts {

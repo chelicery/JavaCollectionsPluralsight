@@ -1,8 +1,8 @@
-package art.b;
+package art.b.CollectionsConcept;
 
 import java.util.*;
 
-import static art.b.Product.BY_WEIGHT;
+import static art.b.CollectionsConcept.Product.BY_WEIGHT;
 
 
 public class ProductCatalogue implements Iterable<Product>{
