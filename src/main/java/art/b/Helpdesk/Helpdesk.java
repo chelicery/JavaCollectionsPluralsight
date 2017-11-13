@@ -1,11 +1,26 @@
 package art.b.Helpdesk;
 
 import java.util.ArrayDeque;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.function.Predicate;
 
 public class Helpdesk {
-    public final Queue<Enquiry> enquiries = new ArrayDeque<Enquiry>();
+    //public final Queue<Enquiry> enquiries = new ArrayDeque<Enquiry>();
+    public final PriorityQueue<Enquiry> enquiries = new PriorityQueue<>(BY_CATEGORY);
+    ///*
+
+    private static final Comparator<Enquiry> BY_CATEGORY = new Comparator<Enquiry>() {
+        @Override
+        public int compare(Enquiry o1, Enquiry o2) {
+            return o1.getCategory().compareTo(o2.getCategory());
+        }
+    };
+
+
+
+     //*/
 
     public void enquire(final Customer customer, final Category category) {
         enquiries.offer(new Enquiry(customer, category));
@@ -46,15 +61,23 @@ public class Helpdesk {
         }
     }
 
+    public void processAllEnquiry(){
+        Enquiry enquiry;
+        while((enquiry = enquiries.poll())!=null){
+            enquiry.getCustomer().reply("Have you tried turning it off and on again?");
+        }
+    }
+
 
     public static void main(String... args){
         Helpdesk helpdesk = new Helpdesk();
 
+        Helpdesk priorityHelpdesk = new Helpdesk();
+
         helpdesk.enquire(Customer.JACK, Category.PHONE);
         helpdesk.enquire(Customer.JILL, Category.PRINTER);
+        helpdesk.enquire(Customer.MARY, Category.COMPUTER);
 
-        helpdesk.processPrinterEnquiry();
-        helpdesk.processGeneralEnquiry();
-        helpdesk.processPrinterEnquiry();
+        helpdesk.processAllEnquiry();
     }
 }
